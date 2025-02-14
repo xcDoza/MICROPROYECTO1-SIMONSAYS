@@ -4,12 +4,13 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: "Courier New", Courier, monospace;
-  background-color: white;
+  font-family: "Poppins", sans-serif;
+  background-color: #222738;
   margin: 0;
   padding: 0;
   height: 100vh;
   width: 100vw;
+  color: #ccc;
 }
 
 header h1 {
@@ -25,7 +26,7 @@ main {
 
 #leftContainer,
 #rightContainer {
-  background-color: #f0f0f0;
+  background-color: #181825;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -49,6 +50,22 @@ form {
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  color: #282f42;
+  background-color: #6e7889; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+input[type="text"]::placeholder {
+  color: #282f42; 
 }
 
 #game {
@@ -67,7 +84,17 @@ button {
   font-size: 1.3rem;
   padding: 0.5rem 1.5rem;
   margin-bottom: 17px;
+  background-color: #222738;
+  color: #fff;
+  border-radius: 20px;
+  border: #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
+
+button:focus {
+    outline: 0;
+  }
 
 table {
   width: 100%;
