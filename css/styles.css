@@ -97,7 +97,7 @@ main {
   z-index: 1; 
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1100px) {
   main {
     flex-direction: column;
     width: 95%; 
@@ -120,10 +120,6 @@ main {
     font-size: 0.9rem; 
   }
 
-  #volume-control {
-    width: 150px;
-  }
-
   .letter {
     font-size: 1.5rem; 
   }
@@ -133,11 +129,7 @@ main {
     position: fixed;
     top: 10px; 
     right: 10px; 
-    z-index: 1000; 
-  }
-
-  #volume-control {
-    top: 50px;
+    z-index: 1; 
   }
 }
 
