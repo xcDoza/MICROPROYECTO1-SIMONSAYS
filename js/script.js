@@ -1,4 +1,4 @@
-// Clase Persona para almacenar nombre y puntuación
+// clase Persona para almacenar nombre y puntuacion
 class Persona {
   constructor(nombre, score) {
     this.nombre = nombre;
@@ -6,10 +6,84 @@ class Persona {
   }
 }
 
+// el audio y el botón de silenciar
+const backgroundSound = document.getElementById("background-sound");
+const muteButton = document.getElementById("mute-button");
+const muteIcon = document.getElementById("mute-icon");
+
+// verifica si la musica está silenciada al cargar la pagina
+let isMuted = localStorage.getItem("isMuted") === "true";
+
+function initializeBackgroundSound() {
+  backgroundSound.volume = 0.2;
+  if (isMuted) {
+    backgroundSound.pause();
+    muteIcon.textContent = "🔇";
+  } else {
+    backgroundSound.play();
+    muteIcon.textContent = "🔊";
+  }
+}
+
+muteButton?.addEventListener("click", () => {
+  isMuted = !isMuted;
+  localStorage.setItem("isMuted", isMuted);
+
+  if (isMuted) {
+    backgroundSound.pause();
+    muteIcon.textContent = "🔇";
+  } else {
+    backgroundSound.play();
+    muteIcon.textContent = "🔊";
+  }
+});
+
+window.addEventListener("load", initializeBackgroundSound);
+
+const volumeSlider = document.getElementById("volume-slider");
+
+volumeSlider?.addEventListener("input", () => {
+  backgroundSound.volume = volumeSlider.value;
+});
+
+if (volumeSlider) {
+  volumeSlider.value = backgroundSound.volume;
+}
+
+const hoverSound = document.getElementById("hover-sound");
+function playHoverSound() {
+  hoverSound.volume = 0.2;
+  hoverSound.currentTime = 0;
+  hoverSound.play();
+}
+document.querySelectorAll("button:not(.color)").forEach((button) => {
+  button.addEventListener("mouseenter", () => {
+      playHoverSound();
+  });
+});
+
+document.querySelectorAll(".color").forEach((color) => {
+  color.addEventListener("click", () => {
+      playButtonSound();
+  });
+});
+
 if (
   window.location.pathname.endsWith("index.html") ||
   window.location.pathname === "/"
 ) {
+  const soundButton = document.getElementById("sound-button");
+
+  function playButtonSound() {
+    soundButton.currentTime = 0;
+    soundButton.play();
+  }
+
+  document.querySelectorAll("button").forEach((button) => {
+    button.addEventListener("click", () => {
+      playButtonSound();
+    });
+  });
   document
     .getElementById("startButton")
     ?.addEventListener("click", function () {
@@ -28,7 +102,7 @@ if (
     const tbody = document.querySelector("#scoreTable tbody");
     tbody.innerHTML = "";
 
-    // Ordenar puntuaciones de mayor a menor
+    // ordenar puntuaciones de mayor a menor
     scores.sort((a, b) => {
       if (!a && !b) return 0;
       if (!a) return 1;
@@ -36,7 +110,7 @@ if (
       return b.score - a.score;
     });
 
-    // Crear siempre 10 filas
+    // crear siempre 10 filas
     for (let i = 0; i < 10; i++) {
       const row = document.createElement("tr");
       if (scores[i]) {
@@ -122,7 +196,9 @@ if (window.location.pathname.endsWith("game.html")) {
   function highlightColor(color) {
     const button = document.getElementById(color);
     button.classList.add("active");
-    playColorSound(color);
+    if (isShowingSequence) {
+      playColorSound(color);
+    }
     setTimeout(() => {
       button.classList.remove("active");
     }, 500);

@@ -309,6 +309,33 @@ td {
   animation-duration: 30s;
 }
 
+#mute-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #00ffff;
+  z-index: 1000;
+}
+
+#mute-button:hover {
+  color: #ff00ff;
+}
+
+#volume-control {
+  position: fixed;
+  top: 76px; /* Debajo del botón de silenciar */
+  right: 20px;
+  z-index: 1000;
+}
+
+#volume-slider {
+  width: 199px;
+}
+
 @keyframes animate {
   0% {
     transform: translateY(0) rotate(0deg);

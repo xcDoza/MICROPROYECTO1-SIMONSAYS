@@ -6,8 +6,39 @@
     <link rel="stylesheet" href="css/game.css" />
   </head>
   <body>
+    <div class="area">
+      <div class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </div>
+    </div>
     <div class="container">
       <h1>Simon Says</h1>
+
+      <button id="mute-button" class="mute-button">
+        <span id="mute-icon">🔊</span>
+      </button>
+      <div id="volume-control">
+        <input
+          type="range"
+          id="volume-slider"
+          min="0"
+          max="0.2"
+          step="0.01"
+          value="0.02"
+        />
+      </div>
 
       <div class="game-container">
         <button class="color" id="red"></button>
@@ -20,10 +51,16 @@
       <button id="start" class="neon-button">Start Game</button>
     </div>
     <audio id="sound-red" src="sounds/red-7991.mp3"></audio>
-    <audio id="sound-blue" src="sounds/purple-7990.mp3"></audio>
+    <audio id="sound-blue" src="sounds/blue-7985.mp3"></audio>
     <audio id="sound-green" src="sounds/green-7987.mp3"></audio>
-    <audio id="sound-yellow" src="sounds/orange-7988.mp3"></audio>
-    <audio id="sound-button" src="sounds/switch-button-106349.mp3"></audio>
+    <audio id="sound-yellow" src="sounds/yellow-7993.mp3"></audio>
+    <audio id="sound-button" src="sounds/bubble-pop-283674.mp3"></audio>
+    <audio
+      id="background-sound"
+      src="sounds/Wandering - Nat Keefe.mp3"
+      loop
+    ></audio>
+    <audio id="hover-sound" src="sounds/hover-button-287656.mp3"></audio>
     <script src="js/script.js"></script>
   </body>
 </html>
