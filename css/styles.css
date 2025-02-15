@@ -17,7 +17,7 @@ body {
   height: 100vh;
   width: 100vw;
   color: #ccc;
-  overflow: hidden; /* Evitar desplazamiento de la página */
+  overflow: hidden;
 }
 
 header h1 {
@@ -126,6 +126,18 @@ main {
 
   .letter {
     font-size: 1.5rem; 
+  }
+
+  #mute-button,
+  #volume-control {
+    position: fixed;
+    top: 10px; 
+    right: 10px; 
+    z-index: 1000; 
+  }
+
+  #volume-control {
+    top: 50px;
   }
 }
 
