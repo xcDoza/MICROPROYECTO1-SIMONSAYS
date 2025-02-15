@@ -93,8 +93,40 @@ main {
   justify-content: space-between;
   width: 80%;
   max-width: 1200px;
-  position: relative; /* Para superponer el fondo animado */
-  z-index: 1; /* Asegura que el contenido esté encima del fondo */
+  position: relative;
+  z-index: 1; 
+}
+
+@media (max-width: 800px) {
+  main {
+    flex-direction: column;
+    width: 95%; 
+  }
+
+  #leftContainer,
+  #rightContainer {
+    width: 100%; 
+    margin-bottom: 20px; 
+  }
+
+  button,
+  .neon-button,
+  input[type="text"] {
+    width: 80%; 
+    font-size: 1.1rem; 
+  }
+
+  table {
+    font-size: 0.9rem; 
+  }
+
+  #volume-control {
+    width: 150px;
+  }
+
+  .letter {
+    font-size: 1.5rem; 
+  }
 }
 
 #leftContainer,
@@ -180,7 +212,7 @@ a.neon-button {
   text-align: center;
   padding: 15px 30px;
   font-size: 1.2em;
-  background: #2d2d2d; 
+  background: #2d2d2d;
   color: #bb86fc; /* Color lila neón */
   border-radius: 30px;
   cursor: pointer;
