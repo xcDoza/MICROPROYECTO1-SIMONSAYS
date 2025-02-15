@@ -90,10 +90,11 @@ audio {
 }
 
 .neon-button:hover {
-  background: #00ffff;
+  background: #bb86fc;
   color: #2d2d2d;
-  box-shadow: 0 0 20px #00ffff;
+  box-shadow: 0 0 10px #bb86fc, 0 0 10px #bb86fc, 0 0 20px #bb86fc;
 }
+
 
 .active {
   opacity: 1 !important;
@@ -122,9 +123,9 @@ audio {
 }
 
 #backToMenu:hover {
-  background: #00ffff;
+  background: #bb86fc;
   color: #2d2d2d;
-  box-shadow: 0 0 20px #00ffff;
+  box-shadow: 0 0 10px #bb86fc, 0 0 10px #bb86fc, 0 0 20px #bb86fc;
 }
 
 .area {

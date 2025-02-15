@@ -58,13 +58,13 @@ function playHoverSound() {
 }
 document.querySelectorAll("button:not(.color)").forEach((button) => {
   button.addEventListener("mouseenter", () => {
-      playHoverSound();
+    playHoverSound();
   });
 });
 
 document.querySelectorAll(".color").forEach((color) => {
   color.addEventListener("click", () => {
-      playButtonSound();
+    playButtonSound();
   });
 });
 
@@ -144,15 +144,12 @@ if (window.location.pathname.endsWith("game.html")) {
 
   const startButton = document.getElementById("start");
   const scoreDisplay = document.getElementById("score");
-  const backButton = document.createElement("button");
-  backButton.id = "backToMenu";
-  backButton.textContent = "Volver al Menú";
-  backButton.className = "neon-button";
-  backButton.style.marginTop = "20px";
-  backButton.addEventListener("click", () => {
+  const backToMenuButton = document.getElementById("backToMenu");
+
+  backToMenuButton?.addEventListener("click", () => {
+    playButtonSound();
     window.location.href = "index.html";
   });
-  document.querySelector(".container")?.appendChild(backButton);
 
   startButton?.addEventListener("click", startGame);
   document.querySelectorAll(".color").forEach((button) => {

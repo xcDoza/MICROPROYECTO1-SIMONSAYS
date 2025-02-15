@@ -168,6 +168,34 @@ button {
   height: 50px;
 }
 
+.neon-button:hover {
+  background: #bb86fc;
+  color: #2d2d2d;
+  box-shadow: 0 0 10px #bb86fc, 0 0 10px #bb86fc, 0 0 20px #bb86fc;
+}
+
+a.neon-button {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  background: #2d2d2d; 
+  color: #bb86fc; /* Color lila neón */
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
+
+a.neon-button:hover {
+  background: #bb86fc;
+  color: #2d2d2d;
+  box-shadow: 0 0 10px #bb86fc, 0 0 20px #bb86fc, 0 0 20px #bb86fc;
+}
+
 button:focus {
   outline: 0;
 }
