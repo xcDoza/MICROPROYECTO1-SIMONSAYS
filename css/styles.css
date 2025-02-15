@@ -172,6 +172,10 @@ button:focus {
   outline: 0;
 }
 
+audio {
+  display: none;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -183,39 +187,15 @@ td {
   text-align: center;
 }
 
-.cell {
-  width: 50%;
-  height: 50%;
-  opacity: 0.2;
-  float: left;
-}
-
-.cell.active {
-  opacity: 1;
-}
-
-.cell:nth-child(1) {
-  background-color: red;
-}
-.cell:nth-child(2) {
-  background-color: green;
-}
-.cell:nth-child(3) {
-  background-color: blue;
-}
-.cell:nth-child(4) {
-  background-color: yellow;
-}
-
 .area {
   background: #222738;
   background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
   height: 100vh;
   width: 100%;
-  position: fixed; /* Para mantenerlo en el fondo */
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 0; /* Detrás del contenido principal */
+  z-index: 0;
 }
 
 .circles {

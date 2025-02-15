@@ -19,14 +19,18 @@ h1 {
   margin-bottom: 20px;
 }
 
+audio {
+  display: none;
+}
+
 #score {
-    position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    font-size: 3em;
-    z-index: 1;
-    pointer-events: none; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .game-container {
@@ -97,4 +101,29 @@ h1 {
   transform: scale(1.1);
   filter: brightness(1.5);
   box-shadow: 0 0 30px white;
+}
+
+#backToMenu {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 17px;
+  background-color: #222738;
+  color: #fff;
+  border-radius: 20px;
+  border: #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  width: 200px;
+  height: 50px;
+  z-index: 2;
+}
+
+#backToMenu:hover {
+  background: #00ffff;
+  color: #2d2d2d;
+  box-shadow: 0 0 20px #00ffff;
 }

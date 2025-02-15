@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Simon Says Neon</title>
-    <link rel="stylesheet" href="css/game.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/game.css" />
+  </head>
+  <body>
     <div class="container">
-        <h1>Simon Says</h1>
-        
-        <div class="game-container">
-            <button class="color" id="red"></button>
-            <button class="color" id="blue"></button>
-            <button class="color" id="green"></button>
-            <button class="color" id="yellow"></button>
-            <div id="score">0</div>
-        </div>
-        
-        <button id="start" class="neon-button">Start Game</button>
+      <h1>Simon Says</h1>
+
+      <div class="game-container">
+        <button class="color" id="red"></button>
+        <button class="color" id="blue"></button>
+        <button class="color" id="green"></button>
+        <button class="color" id="yellow"></button>
+        <div id="score">0</div>
+      </div>
+
+      <button id="start" class="neon-button">Start Game</button>
     </div>
+    <audio id="sound-red" src="sounds/red-7991.mp3"></audio>
+    <audio id="sound-blue" src="sounds/purple-7990.mp3"></audio>
+    <audio id="sound-green" src="sounds/green-7987.mp3"></audio>
+    <audio id="sound-yellow" src="sounds/orange-7988.mp3"></audio>
+    <audio id="sound-button" src="sounds/switch-button-106349.mp3"></audio>
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
