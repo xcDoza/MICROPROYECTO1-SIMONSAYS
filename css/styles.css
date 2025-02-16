@@ -94,42 +94,46 @@ main {
   width: 80%;
   max-width: 1200px;
   position: relative;
-  z-index: 1; 
+  z-index: 1;
 }
 
 @media (max-width: 1100px) {
+  html,
+  body {
+    justify-content: flex-start;
+  }
   main {
     flex-direction: column;
-    width: 95%; 
+    align-items: center;
+    width: 150%;
   }
 
   #leftContainer,
   #rightContainer {
-    width: 100%; 
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
+    font-size: 0.6rem;
   }
 
   button,
   .neon-button,
   input[type="text"] {
-    width: 80%; 
-    font-size: 1.1rem; 
+    width: 80%;
+    font-size: 0.7rem;
   }
 
   table {
-    font-size: 0.9rem; 
+    font-size: 0.6rem;
   }
 
   .letter {
-    font-size: 1.5rem; 
+    font-size: 1.1rem;
   }
 
-  #mute-button,
-  #volume-control {
-    position: fixed;
-    top: 10px; 
-    right: 10px; 
-    z-index: 1; 
+  #mute-button {
+    position: relative;
+    top: 20px;
+    width: 20px;
+    border-radius: 80px;
   }
 }
 
@@ -199,7 +203,6 @@ button {
   border-radius: 20px;
   border: #fff;
   cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   width: 200px;
   height: 50px;
 }
@@ -380,7 +383,6 @@ td {
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 24px;
   color: #00ffff;
   z-index: 1000;
 }
@@ -391,9 +393,9 @@ td {
 
 #volume-control {
   position: fixed;
-  top: 76px; /* Debajo del botón de silenciar */
+  top: 76px;
   right: 20px;
-  z-index: 1000;
+  z-index: 10;
 }
 
 #volume-slider {
